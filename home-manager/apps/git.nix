@@ -10,6 +10,8 @@
     extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+      credential.helper = "manager";
+      credential.credentialStore = "secretservice";
     };
   };
 }
