@@ -2,9 +2,8 @@
 #!nix-shell -i bash -p bash
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd $parent_path
-switch = "!f() { git checkout $1 2>/dev/null || git checkout -b $1; }; f"
-git switch local
+git checkout local 2>/dev/null || git checkout -b local
+git pull origin main
 git add .
-commit_count=$(git rev-list HEAD --count)
-git commit -m "temp-commit-revision-$(commit_count)"
+git commit -m "temp-commit-revision-$(git rev-list HEAD --count)"
 home-manager switch --flake ./#$USER
