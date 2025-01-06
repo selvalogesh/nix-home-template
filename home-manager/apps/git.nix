@@ -5,7 +5,7 @@
     userName = "Selva Logesh R";
     userEmail = "selvalogesh95@gmail.com";
     hooks = {
-      post-commit = ./post-commit-script;
+      post-commit = ./git_hooks/post-commit-script.sh;
     };
     extraConfig = {
       init.defaultBranch = "main";
