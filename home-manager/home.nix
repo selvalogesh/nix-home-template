@@ -10,7 +10,13 @@
     git-credential-manager
     nerd-fonts.jetbrains-mono
   ];
+  home.shellAliases = {
+    nix-switch = "~/nix-home-template/switch.sh";
+    nix-commit = "~/nix-home-template/commit-local.sh";
+  };
   imports = [
+    ./apps/zsh.nix
+    ./apps/bash.nix
     ./apps/git.nix
     ./apps/direnv.nix
     # ./apps/neovim.nix
