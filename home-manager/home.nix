@@ -17,6 +17,7 @@
   imports = [
     ./apps/zsh.nix
     ./apps/bash.nix
+    ./apps/tmux.nix
     ./apps/git.nix
     ./apps/direnv.nix
     # ./apps/neovim.nix
