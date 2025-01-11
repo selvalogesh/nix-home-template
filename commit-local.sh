@@ -9,4 +9,6 @@ fi
 git pull origin main:main --ff-only --no-edit
 git checkout main
 git merge --squash local
-git commit -m $commit_message
+git commit -m "$commit_message"
+git checkout local
+git merge main -s ort --no-edit
