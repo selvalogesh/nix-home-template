@@ -6,7 +6,7 @@ read -p "Enter commit message (default: merge-<last-local-commit-message>): " co
 if [[ $commit_message == "" ]]; then
     commit_message="merge-$(git log --format=%B -n 1 local)"
 fi
-git fetch origin
+git pull origin main:main --ff-only --no-edit
 git checkout main
 git merge --squash local
 git commit -m $commit_message

@@ -6,5 +6,5 @@ git add .
 git commit -m "local-revision-$(git rev-list HEAD --count)"
 home-manager switch --flake ./#$USER
 git checkout local || git checkout -b local
-git pull origin main:main --no-edit
-git merge main --no-edit
+git pull origin main:main --ff-only --no-edit
+git merge main -s ort --no-edit
